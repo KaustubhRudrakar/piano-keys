@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #1f1c2c, #928dab);
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    background-color: #CBCBCB;
+    color:#000000;
+}
+
+.piano {
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+}
+
+.key span {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.white span {
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.black span {
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+
+.key {
+    position: relative;
+    border: 1px solid #000;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.1s;
+}
+
+.key.active {
+    transform: scale(0.95);
+    background-color: #ddd;
+}
+
+.white {
+    width: 60px;
+    height: 200px;
+    background: white;
+    z-index: 1;
+}
+
+.white:active {
+    background: #ddd;
+}
+
+.black {
+    width: 40px;
+    height: 120px;
+    background: black;
+    position: absolute;
+    z-index: 2;
+    margin-left: -20px;
+}
+
+.black:active {
+    background: #444;
+}
+
+.key[data-note="C#"] {
+    left: 40px;
+}
+
+.key[data-note="D#"] {
+    left: 100px;
+}
+
+.key[data-note="F#"] {
+    left: 220px;
+}
+
+.key[data-note="G#"] {
+    left: 280px;
+}
+
+.key[data-note="A#"] {
+    left: 340px;
+}
+
+footer {
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    margin-top: 228px;
+}
